@@ -132,6 +132,30 @@ To solve this, `parse\_alerts.py` serves as a programmatic data minimization uti
 
 
 
+\## 📸 Verified Infrastructure \& Analytics Proof
+
+
+
+\### 1. Active EventBridge Alert Tripwires
+
+Here is the automated configuration tracking rule engine deployed via Terraform live within the AWS Management Console:
+
+!\[EventBridge Cloud Security Architecture Proof](docs/AWSConsEventbridge.png)
+
+
+
+\### 2. In-Memory Python Log Reduction Summary
+
+Our localized SecOps parser successfully evaluating compressed S3 shards and extracting high-risk malicious activity indicators:
+
+!\[Python boto3 Ingestion Tool Proof](docs/parse\_alert.png)
+
+
+
+\---
+
+
+
 \## 📁 Repository Directory Structure
 
 
@@ -148,9 +172,9 @@ aws-security-telemetry/
 
 ├── docs/
 
-│   ├── aws\_config.png         # Verified EventBridge Active Tripwire Guardrails
+│   ├── AWSConsEventbridge.png # Verified EventBridge Active Tripwire Guardrails
 
-│   └── parser\_output.png      # Custom Python Ingestion Engine Execution Evidence
+│   └── parse\_alert.png        # Custom Python Ingestion Engine Execution Evidence
 
 ├── infra/
 
@@ -188,73 +212,9 @@ aws-security-telemetry/
 
 
 
-\## 🚀 Threat Simulation \& Validation Playbook
-
-
-
-\### 1. Verify Infrastructure Blueprint Architecture
-
-```bash
-
-cd infra
-
-terraform init
-
-terraform validate
-
-terraform plan
-
-terraform apply
-
-```
-
-
-
-\### 2. Force Defensive Evasion (Incident Simulation)
-
-To prove that our tracking sensors function properly under attack conditions, execute an explicit operation to shut down the logging camera via the AWS CLI:
-
-```bash
-
-aws cloudtrail stop-logging --name "sec-telemetry-lab-trail"
-
-```
-
-\* \*\*Expected Telemetry Behavior\*\*: Amazon EventBridge catches the exact payload block, activates the matching condition rule, and targets the SNS megaphone to issue an urgent alert straight to the security operator's inbox.
-
-
-
-Restore account visibility immediately after validation:
-
-```bash
-
-aws cloudtrail start-logging --name "sec-telemetry-lab-trail"
-
-```
-
-
-
-\### 3. Programmatic Log Harvesting
-
-Execute your automated audit extraction engine to filter out noise and extract definitive indicators of the incident:
-
-```bash
-
-cd ../scripts
-
-pip install -r requirements.txt
-
-python parse\_alerts.py
-
-```
-
-
-
-\---
-
-
-
 \## 🧹 Infrastructure De-provisioning
+
+
 
 To wipe out deployed structures and prevent ongoing cloud resource consumption, clean up your environment using the orchestration cleanup utility:
 
@@ -265,4 +225,6 @@ cd infra
 terraform destroy
 
 ```
+
+
 
