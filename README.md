@@ -25,7 +25,7 @@ My primary objective here was visibility and defensive monitoring. I wanted to b
 
 ---
 
-## 🛡️ Core Guardrails & Real-World Use Cases
+## Core Guardrails & Real-World Use Cases
 
 Instead of manually clicking through the AWS console, this entire architecture is managed as code. Here is exactly what is happening under the hood to align with defensive security standards:
 
